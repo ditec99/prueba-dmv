@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html lang="es">
+    <head>
+        <!-- Informació Meta -->
+        <meta charset="utf-8"/>
+        <meta name="description" content="Lorem Ipsum">
+        <meta name="keywords" content="Lorem, Ipsum">
+        <meta name="author" content="Lorem Ipsum">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+
+        <!-- Enllaç a l'arxiu CSS Extern -->
+        <link rel=stylesheet href="css/style.css" type="text/css"/>
+
+        <!--CSS Intern-->
+        <style type="text/css">
+
+        </style>
+
+        <!-- Enllaç a Javascript Extern -->
+        <script  type="text/javascript" src="js/javascript.js"></script>
+
+        <!-- favicon -->
+        <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+
+        <!-- Títol de la pàgina -->
+        <title>Formulari per validar</title>
+    </head>
+    <body>
+        <header></header>
+        <section>
+            <article>
+                <h2>Formulari de registre</h2>
+                <form onsubmit="valida_form();">
+
+                    <div class="question" >
+                        <label>NOM</label>
+                        <input type="text" name="nom" id="nom" class="input" placeholder="Escriu el teu nom" onblur="validar('nom','message_nom', 'type1')" >
+                        <!--					<div class="cruces" id="cruz"></div>-->
+                        <div class="message" id="message_nom"></div>
+                    </div>
+                    <div class="question">
+                        <label>COGNOM</label>
+                        <input type="text" name="cognom" id="cognom" placeholder="Escriu el teu cognom" onblur="validar('cognom','message_cognom', 'type1')"><br>
+                        <div class="message" id="message_cognom"></div>
+                    </div>
+
+                    <div class="question">
+                        <label>Email</label>
+                        <input type="email" name="email1" id="email1" placeholder="Escriu el teu correu-e" onblur="validar('email1','message_email1', 'type2')"><br>
+                        <div class="message" id="message_email1"></div>
+                    </div>
+
+                    <div class="question">
+                        <label>CONFIRMAR EMAIL</label>
+                        <input type="email" name="email2" id="email2" placeholder="Confirma el correu-e" onblur="validar('email2','message_email2', 'type2','email1')"><br>
+                        <div class="message" id="message_email2"></div>
+                    </div>
+
+                    <div class="question">
+                        <label>CONTRASEÑA</label>
+                        <input type="password" name="password1" id="password1" placeholder="Escriu una contrasenya" onblur="validar('password1','message_password1', 'type3')"><br>
+                        <div class="message" id="message_password1"></div>
+                    </div>
+
+                    <div class="question">
+                        <label>CONFIRMAR CONTRASEÑA</label>
+                        <input type="password" name="password2" id="password2" placeholder="Repeteix la contrasenya" onblur="validar('password2','message_password2', 'type3','password1')"><br>
+                        <div class="message" id="message_password2"></div>
+                    </div>
+
+                    <div class="question">
+                        <input type="checkbox" name="condicions" id="condicions" > Accepto les condicions. <br>
+                        <div class="message" id="message_condicions"></div>
+                    </div>
+
+                    <input type="submit" value="Enviar" onclick="return validar('condicions','message_condicions','type4')">
+                </form>
+            </article>
+        </section>
+        <footer></footer>
+    </body>
+</html>
+
+<!-- -->

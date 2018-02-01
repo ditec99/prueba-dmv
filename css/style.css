@@ -1,0 +1,89 @@
+* {font-family: 'Roboto', sans-serif;}
+
+
+body {
+    background: url("../img/background.png");
+}
+
+article {
+    margin: 70px auto;
+    width: 500px;
+}
+
+.message {
+    color: red;
+    /*margin-bottom:0;*/
+    min-height: 7px; 
+}
+
+.question {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    width: 500px;
+    height: 25px;
+    font-size: 12px;
+    padding: 3px 15px;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+    border: 2px solid #99ccfc;
+}
+
+.message .eSignal {
+    width: 40px;
+    float: left;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    position: absolute;
+    top: 21px;
+    right: -41px;
+
+}
+
+.message .error {
+    background-image: url("../img/Redcross.png");
+}
+
+.message .success {
+    background-image: url("../img/green-tick.png");
+}
+
+
+
+
+/*Media Queries*/
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    article {
+        margin: 40px auto;
+        width: 300px;
+    }
+    input[type=text], input[type=password], input[type=email] {
+        width: 300px;;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+
+}
